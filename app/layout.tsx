@@ -27,31 +27,29 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased 
-        h-[100vh]
-        flex flex-col items-center justify-center  
-        bg-purple-900`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased
+          h-[100vh]
+          flex flex-col justify-center items-center
+          bg-purple-900
+        `}
       >
-        <header className="
-         w-[50vw] mb-1
-         flex flex-row items-center justify-between 
-         font-bold text-white"
-        >
+        
+        <header className=" 
+              w-[50vw] pb-3
+              flex flex-row justify-between items-center
+              text-white 
+        ">
           <h1 className="text-4xl font-bold">Municípios</h1>
-          <nav className="flex flex-row gap-1">
-          <Link href="/" className="underline">Home</Link>
-          <Link href="/municipalities" className="underline">Municípios</Link>
+          <nav className="flex flex-row gap-4">
+            <Link  className="hover:underline" href="/">Home</Link>
+            <Link className="hover:underline" href="/municipalities">Municípios</Link>
+            <Link className="hover:underline" href="/about">Sobre</Link>            
           </nav>
         </header>
 
-        <main className="
-          h-[70vh] w-[50vw] p-10 rounded-xl
-          bg-white">
-          
-          {children}
-          
-        </main>
-        
+        <main className="h-[70vh] w-[50vw] p-5 rounded-xl bg-white">{children}</main>
+        <footer className="text-sm text-white pt-4">2024, DEISI, Lusófona</footer>
+
       </body>
     </html>
   );
