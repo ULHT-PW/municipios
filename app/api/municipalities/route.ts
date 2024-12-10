@@ -1,5 +1,7 @@
-export async function GET () {
+export async function GET() {
+
     return fetch('https://api.carrismetropolitana.pt/municipalities')
-            .then(res => res.json())
-            .then(data => Response.json(data))
+           .then(res => res.json())
+           .then(data => Response.json(data))
+
 }
