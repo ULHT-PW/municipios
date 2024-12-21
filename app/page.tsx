@@ -4,9 +4,9 @@ import Image from 'next/image'
 
 export default function page() {
   return <>
-    <p>Página que interage com a API dos Municípios.</p>
-    <p>
-      Endpoint:
+    <p className="font-bold text-xl pb-3">Página que interage com a API dos Municípios.</p>
+    <p className="pb-3">
+      Endpoint: 
       <Link 
         className="underline"
         href="https://api.carrismetropolitana.pt/municipalities">
