@@ -11,6 +11,6 @@ export default function Button({count, increment}: ButtonProps) {
         onClick={increment}
         className="p-2 mt-2 mb-2 w-full bg-yellow-200 border border-black hover:bg-yellow-300 rounded-xl"
         >
-        {count}
+        Clique o botão (já foi clicado {count} vezes)
     </button>)
 }

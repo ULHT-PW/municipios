@@ -27,6 +27,15 @@ export default function Page() {
 
 
   //
+  // F. Handlers (interação do utilizador)
+  function addRemoveMunicipality(municipio: string) {
+    setMunicipalitiesList((prev) =>
+      prev.includes(municipio) ? prev.filter(m => m != municipio) : [...prev, municipio]
+    )
+  }
+
+
+  //
   // E. Efeitos
   useEffect(() => {
     const localMunicipalitiesList = localStorage.getItem('municipalitiesList') || '[]';
@@ -36,15 +45,6 @@ export default function Page() {
   useEffect(() => {
     localStorage.setItem('municipalitiesList', JSON.stringify(municipalitiesList));
   }, [municipalitiesList])
-
-
-  //
-  // F. Handlers (interação do utilizador)
-  function addRemoveMunicipality(municipio: string) {
-    setMunicipalitiesList((prev) =>
-      prev.includes(municipio) ? prev.filter(m => m != municipio) : [...prev, municipio]
-    )
-  }
 
 
   //
