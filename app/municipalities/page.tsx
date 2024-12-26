@@ -5,7 +5,7 @@ import useSWR from 'swr'
 import { Municipality } from '../../models/interfaces'
 import MunicipalityCard from '@/components/MunicipalityCard/MunicipalityCard'
 
-export default function page() {
+export default function Page() {
 
   //
   // A. Gestão de Estados
