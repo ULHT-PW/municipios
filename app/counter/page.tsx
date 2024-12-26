@@ -23,6 +23,8 @@ export default function page() {
         count={count} 
         increment={()=>setCount(count+1)}
     />
-    <p>O contador está em {count}. O clique no botão altera o valor, porque a função responsável pela atualização do estado é passada como prop para o componente botão.</p>
+    <p>O contador está em {count}. O clique no botão altera o valor, 
+      porque a função responsável pela atualização do estado 
+      é passada como prop para o componente botão.</p>
   </>
 }

@@ -3,7 +3,7 @@ import React from 'react'
 interface ButtonProps {
     count: number;
     increment: () => void;
-  }
+}
   
 export default function Button({count, increment}: ButtonProps) {
   return (
