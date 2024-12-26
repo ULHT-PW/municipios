@@ -66,7 +66,6 @@ export default function Page() {
       {data.map(m => (
         <MunicipalityCard
           key={m.id}
-          id={m.id}
           name={m.name}
           district_name={m.district_name}
           addRemoveMunicipality={() => addRemoveMunicipality(m.name)}
