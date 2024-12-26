@@ -27,7 +27,7 @@ export default function Page() {
 
 
   //
-  // F. Handlers (interação do utilizador)
+  // E. Handlers (interação do utilizador)
   function addRemoveMunicipality(municipio: string) {
     setMunicipalitiesList((prev) =>
       prev.includes(municipio) ? prev.filter(m => m != municipio) : [...prev, municipio]
@@ -36,7 +36,7 @@ export default function Page() {
 
 
   //
-  // E. Efeitos
+  // F. Efeitos
   useEffect(() => {
     const localMunicipalitiesList = localStorage.getItem('municipalitiesList') || '[]';
     setMunicipalitiesList(JSON.parse(localMunicipalitiesList))

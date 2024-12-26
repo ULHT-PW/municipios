@@ -5,18 +5,29 @@ import React, { useEffect, useState } from 'react'
 
 export default function Page() {
 
-  const [count, setCount] = useState(0)
+  //
+  // A. Gestão de estados
+  const [count, setCount] = useState(() => {
+    const countStr = localStorage.getItem('count') || '0';
+    return parseInt(countStr, 10)
+  })
 
+  //
+  // B. Fetch de Dados
+  // C. Transformação de dados
+  // D. Funções utilitárias
+  // E. Handlers
+  
+  //
+  // F. Efeitos
   useEffect(() => {
-    localStorage.setItem('count', count + '')
+    localStorage.setItem('count', count.toString())
     console.log(count)
   }, [count])
 
-  useEffect(() => {
-    const countStr = localStorage.getItem('count') || '0';
-    setCount(parseInt(countStr))
-  }, [])
-
+    
+  //
+  // G. Renderização
   return <>
     <h2 className="text-xl font-bold">Contador</h2>
     <Button
