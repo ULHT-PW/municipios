@@ -3,7 +3,7 @@
 import Button from '@/components/Button/Button'
 import React, { useEffect, useState } from 'react'
 
-export default function page() {
+export default function Page() {
 
     const [count, setCount] = useState(0)
     
