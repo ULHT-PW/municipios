@@ -1,6 +1,15 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Explore esta aplicação no [Vercel]([url](https://municipios-ruddy.vercel.app/))
+
+Veja os [video-tutoriais](https://educast.fccn.pt/vod/channels/2pld2hfi8j?locale=pt) que explicam detalhadamente a construção desta App
+
+![image](https://github.com/user-attachments/assets/79122abf-21af-40d2-ba2b-0e0e4e5447b1)
+
+
 
 ## Getting Started
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
 
 First, run the development server:
 
