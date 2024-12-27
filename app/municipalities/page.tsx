@@ -20,18 +20,23 @@ export default function Page() {
 
   //
   // C. Transformaçao/processamento de Dados
+  const transformedMunicipalities = data?.map(m => ({
+    ...m,
+    displayName: `${m.name} (${m.district_name})`, // adiciona nome formatado para exibição
+  })) || [];
 
-
+  
   //
   // D. Funções utilitárias
+  function toggleItemInList(list: string[], item: string): string[] {
+    return list.includes(item) ? list.filter(i => i !== item) : [...list, item];
+  }
 
 
   //
   // E. Handlers (interação do utilizador)
   function addRemoveMunicipality(municipio: string) {
-    setMunicipalitiesList((prev) =>
-      prev.includes(municipio) ? prev.filter(m => m != municipio) : [...prev, municipio]
-    )
+    setMunicipalitiesList(prev => toggleItemInList(prev, municipio));
   }
 
 
@@ -63,11 +68,10 @@ export default function Page() {
     </article>
 
     <article className="overflow-auto w-2/3">
-      {data.map(m => (
+      {transformedMunicipalities.map(m => (
         <MunicipalityCard
           key={m.id}
-          name={m.name}
-          district_name={m.district_name}
+          displayName={m.displayName}
           addRemoveMunicipality={() => addRemoveMunicipality(m.name)}
           isSelected={municipalitiesList.includes(m.name)}
         />

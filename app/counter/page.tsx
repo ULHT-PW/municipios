@@ -8,8 +8,8 @@ export default function Page() {
   //
   // A. Gestão de estados
   const [count, setCount] = useState(() => {
-    const countStr = localStorage.getItem('count') || '0';
-    return parseInt(countStr, 10)
+    const countStr = localStorage.getItem('count');
+    return countStr ? parseInt(countStr, 10) : 0
   })
 
   //
