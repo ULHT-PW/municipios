@@ -20,24 +20,25 @@ async function simpleVersion() {
 async function safeVersion() {
   try {
     const res = await fetch('https://api.carrismetropolitana.pt/municipalities');
-
+    // Verifica se a resposta HTTP é 2xx
     if (!res.ok) {
+      // Retorna uma resposta de erro com o status correto
       return new Response('Erro ao buscar dados', { status: res.status });
     }
-
-    const data = await res.json();
+    const data = await res.json();
     return Response.json(data);
-
-  } catch (error) {
+  } catch (error) {
+    // Captura erros de rede ou exceções inesperadas
     return new Response('Erro inesperado', { status: 500 });
   }
 }
 
+
 //
-// ✅ Esta é a função realmente exportada e usada na API.
+// Esta é a função realmente exportada e usada na API.
 //
 export async function GET() {
-  // Podes alternar entre versões para fins pedagógicos:
+  // Pode alternar entre versões para fins pedagógicos:
   // return simpleVersion();  // ← versão sem tratamento de erro
   return safeVersion();       // ← versão com tratamento correto
 }
