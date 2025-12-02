@@ -51,10 +51,10 @@ export default function LinesPage() {
             <h2 className="font-bold text-xl">
                 Linhas que passam por:
                 <select
+                    className="bg-gray-300 py-1 px-2 mx-2 rounded-xl"
                     name="municipality"
                     value={municipality}
                     onChange={(e) => setMunicipality(e.target.value)}
-                    className="bg-gray-300 py-1 px-2 mx-2 rounded-xl"
                 >
                     <option value="">Escolha um Município</option>
                     {dataMunicipalities.map(m => (
