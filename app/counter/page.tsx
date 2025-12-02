@@ -7,10 +7,7 @@ export default function Page() {
 
   //
   // A. Gestão de estados
-  const [count, setCount] = useState(() => {
-    const countStr = localStorage.getItem('count');
-    return countStr ? parseInt(countStr, 10) : 0
-  })
+  const [count, setCount] = useState(0)
 
   //
   // B. Fetch de Dados
@@ -20,6 +17,12 @@ export default function Page() {
   
   //
   // F. Efeitos
+
+  useEffect(() => {
+    const countStr = localStorage.getItem('count')
+    if (countStr) setCount(parseInt(countStr, 10))
+  }, [])
+
   useEffect(() => {
     localStorage.setItem('count', count.toString())
     console.log(count)
