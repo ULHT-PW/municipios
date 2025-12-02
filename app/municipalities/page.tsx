@@ -55,7 +55,7 @@ export default function Page() {
   //
   // G. Renderização
   if (error) return <div>Error loading data</div>
-  if (isLoading) return <div>Loading... </div>
+  if (isLoading) return <div>Loading municipalities... </div>
   if (!data) return <div>No data!</div>
 
   return <section className="h-full flex">

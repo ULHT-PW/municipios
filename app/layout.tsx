@@ -51,7 +51,7 @@ export default function RootLayout({
         </header>
 
         <main className="h-[70vh] w-[50vw] p-5 rounded-xl bg-white overflow-auto">{children}</main>
-        <footer className="text-sm text-white pt-4">2024, DEISI, Lusófona</footer>
+        <footer className="text-sm text-white pt-4">2025, DEISI, Lusófona</footer>
 
       </body>
     </html>

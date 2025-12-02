@@ -30,8 +30,8 @@ export default function LinesPage() {
 
     //
     // B. Fetch de Dados
-    const { data: dataMunicipalities, error: errorMunicipalityies, isLoading: isLoadingMunicipalityies } = useSWR<Municipality[]>('/api/municipalities', fetcher)
-    const { data: dataLines, error: errorLines, isLoading: isLoadingLines } = useSWR<Line[]>('https://api.carrismetropolitana.pt/lines', fetcher)
+    const { data: dataMunicipalities, error: errorMunicipalities, isLoading: isLoadingMunicipalityies } = useSWR<Municipality[]>('/api/municipalities', fetcher)
+    const { data: dataLines, error: errorLines, isLoading: isLoadingLines } = useSWR<Line[]>('api/lines', fetcher)
 
     //
     // C. useEffects
@@ -42,9 +42,12 @@ export default function LinesPage() {
     }, [municipality, dataLines])
 
 
-    if (errorMunicipalityies) return <p>Error</p>
-    if (isLoadingMunicipalityies) return <p>Loading</p>
-    if (!dataMunicipalities) return <p>No data</p>
+    if (errorMunicipalities) return <p>Error municipalities</p>
+    if (errorLines) return <p>Error lines</p>
+    if (isLoadingMunicipalityies) return <p>Loading municipalities</p>
+    if (isLoadingLines) return <p>Loading lines</p>
+    if (!dataMunicipalities) return <p>No municipalities data</p>
+    if (!dataLines) return <p>No lines data</p>
 
     return (
         <>
