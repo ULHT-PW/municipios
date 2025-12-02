@@ -37,18 +37,20 @@ export default function RootLayout({
         <header className=" 
               w-[50vw] pb-3
               flex flex-row justify-between items-center
+              gap-5
               text-white 
         ">
           <h1 className="text-4xl font-bold">Municípios</h1>
           <nav className="flex flex-row gap-4">
             <Link  className="hover:underline" href="/">Home</Link>
             <Link className="hover:underline" href="/municipalities">Municípios</Link>
-            <Link className="hover:underline" href="/counter">Contador</Link>            
+            <Link className="hover:underline" href="/lines">Linhas</Link>
+            {/* <Link className="hover:underline" href="/counter">Contador</Link>             */}
             <Link className="hover:underline" href="/about">Sobre</Link>            
           </nav>
         </header>
 
-        <main className="h-[70vh] w-[50vw] p-5 rounded-xl bg-white">{children}</main>
+        <main className="h-[70vh] w-[50vw] p-5 rounded-xl bg-white overflow-auto">{children}</main>
         <footer className="text-sm text-white pt-4">2024, DEISI, Lusófona</footer>
 
       </body>
